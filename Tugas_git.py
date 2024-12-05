@@ -74,3 +74,4 @@ for lokasi, data in data_panen.items():
         print(f"Lokasi {data['nama_lokasi']} dalam kondisi baik.")
 
 #Nazwa bella 152023173 
+#Bella python
