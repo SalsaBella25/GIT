@@ -54,3 +54,21 @@ print(f"jumlah hasil panen jagung dari lokasi2 adalah: {jumlahJagung_lokasi2}")
 namaLokasi_lokasi3 = data_panen['lokasi3']['nama_lokasi']
 print(f"nama dari lokasi3 adalah: {namaLokasi_lokasi3}")
 
+jumlah_hasilPadi = []
+jumlah_hasilKedelai =[]
+
+for lokasi, data in data_panen.items():
+    jumlah_hasilPadi.append(data['hasil_panen']['padi'])
+    jumlah_hasilKedelai.append(data['hasil_panen']['kedelai'])
+
+print(jumlah_hasilKedelai)
+print(jumlah_hasilPadi)
+
+for lokasi, data in data_panen.items():
+    padi = data['hasil_panen']['padi']
+    jagung = data['hasil_panen']['jagung']
+    
+    if padi > 1300 or jagung > 800:
+        print(f"Lokasi {data['nama_lokasi']} memerlukan perhatian khusus.")
+    else:
+        print(f"Lokasi {data['nama_lokasi']} dalam kondisi baik.")
